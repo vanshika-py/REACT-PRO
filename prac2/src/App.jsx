@@ -8,7 +8,11 @@ function App() {
   const [count, setCount] = useState(0)
 
 function increment() {
-    setCount (count + 1)
+    // setCount (count + 1)
+
+    setCount(function(prev){
+      return prev + 1
+    })
 }
 
 function decrement() {
